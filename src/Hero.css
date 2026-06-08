@@ -1,0 +1,49 @@
+.hero-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, #1a2a3a 0%, #0d1117 100%); /* Depth retained from grayish-greenish theme */
+    padding-top: 100px; /* Space retained for fixed navbar */
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 900px; /* limits content width for better readability retained */
+}
+
+.hero-greeting {
+    font-size: 5rem;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 20px; /* Spacious bottom spacing retained */
+}
+
+.highlight {
+    color: #00f2ff; /* distinctive cyan color retained */
+    text-shadow: 0 0 15px rgba(0, 242, 255, 0.5); /* Soft glow filter retained */
+}
+
+.hero-description {
+    font-size: 1.6rem;
+    color: #aaa;
+    margin-bottom: 50px; /* Tighter spacious spacing retained */
+    letter-spacing: 1px;
+}
+
+.hero-btn {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+}
+
+.hero-btn:hover {
+    border: #00f2ff;
+    color: #ffffff;
+}

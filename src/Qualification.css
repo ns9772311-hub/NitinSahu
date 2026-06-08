@@ -1,0 +1,106 @@
+/* ==========================================================================
+   --- MAIN CONTAINER & TITLE ---
+   ========================================================================== */
+.section-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+/* ==========================================================================
+   --- QUALIFICATION GRID LAYOUT ---
+   ========================================================================== */
+.qualification-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsive grid retained */
+  gap: 40px;
+  margin-top: 50px;
+}
+
+/* Individual Card Item */
+.qualification-item {
+  background-color: #1a1a1a; /* Solid grayish color retained */
+  padding: 35px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.05); /* Very soft border filter retained */
+  text-align: left; /* Left alignment retained */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Card Hover Effect */
+.qualification-item:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 242, 255, 0.3); /* Hover karne par neon cyan border chamkega */
+}
+
+/* Card Heading (Academic / Professional) */
+.qualification-item h3 {
+  font-size: 1.8rem;
+  color: #00f2ff; /* Distinctive neon blue/cyan color retained */
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid rgba(0, 242, 255, 0.1);
+  padding-bottom: 10px;
+}
+
+/* ==========================================================================
+   --- NEW CLEAN LIST FORMAT (FOR UL & LI) ---
+   ========================================================================== */
+.qualification-list {
+  list-style: none; /* Default boring bullets hatane ke liye */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 22px; /* Har qualification ke beech me perfect professional gap */
+}
+
+.qualification-list li {
+  display: flex;
+  flex-direction: column; /* Degree upar, details/status niche */
+  gap: 5px;
+  position: relative;
+  padding-left: 20px;
+}
+
+/* Custom Cyber Bullet Dash before each list item */
+.qualification-list li::before {
+  content: "»";
+  position: absolute;
+  left: 0;
+  top: -2px;
+  color: #00f2ff; /* Bullet icon color cyan */
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Degree / Course Name Style */
+.qualification-list li strong {
+  font-size: 1.15rem;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* University / Stream / Status Details Style */
+.qualification-list li span {
+  font-size: 0.95rem;
+  color: #ccc; /* Retained soft white color */
+  line-height: 1.5;
+  font-weight: 400;
+  opacity: 0.85;
+}

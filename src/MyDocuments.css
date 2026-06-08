@@ -1,0 +1,276 @@
+/* Container & Section Layout */
+.documents-section {
+  padding: 80px 10%;
+  background-color: #0f1115; /* Deep Charcoal Background */
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.section-title-container {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.title-underline {
+  width: 100px;
+  height: 4px;
+  background-color: #00f2ff; /* Neon Cyan Glow line */
+  margin: 10px auto 0;
+  box-shadow: 0 0 10px #00f2ff;
+}
+
+.sub-section-title {
+  font-size: 1.8rem;
+  margin: 50px 0 30px;
+  color: #00f2ff;
+  text-shadow: 0 0 5px rgba(0, 242, 255, 0.3);
+}
+
+/* Profiles/Social Cards Grid */
+.social-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.social-card {
+  background-color: #161920; /* Medium Charcoal Card */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 30px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.social-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.social-card p {
+  font-size: 0.95rem;
+  color: #a0aec0;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.card-link-text {
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+/* Neon Glow Hovers for Social Profiles */
+.github-glow:hover {
+  border-color: #00f2ff;
+  box-shadow: 0 0 20px rgba(0, 242, 255, 0.2);
+  transform: translateY(-5px);
+}
+.github-glow:hover .card-link-text {
+  color: #00f2ff;
+}
+
+.linkedin-glow:hover {
+  border-color: #00f2ff;
+  box-shadow: 0 0 20px rgba(0, 242, 255, 0.2);
+  transform: translateY(-5px);
+}
+.linkedin-glow:hover .card-link-text {
+  color: #00f2ff;
+}
+
+/* Projects Cards Layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background-color: #161920;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 14px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 242, 255, 0.4);
+}
+
+/* Large Card layout covers full width if grid space permits */
+.large-card {
+  grid-column: span 1;
+}
+@media (min-width: 992px) {
+  .large-card {
+    grid-column: span 2;
+  }
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-header h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.project-tag {
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.secure-tag {
+  background-color: rgba(0, 242, 255, 0.1);
+  color: #00f2ff;
+  border: 1px solid rgba(0, 242, 255, 0.2);
+}
+
+.project-subtitle {
+  font-size: 0.9rem;
+  color: #00f2ff;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin: 20px 0;
+  font-style: italic;
+}
+
+/* Tech Badges */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tech-stack span {
+  background-color: #0f1115;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #a0aec0;
+}
+
+/* Security Highlights Box */
+.security-features-box {
+  background-color: rgba(15, 17, 21, 0.7);
+  border-left: 3px solid #00f2ff;
+  padding: 15px 20px;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 25px;
+  flex-grow: 1;
+}
+
+.security-features-box h4 {
+  font-size: 0.95rem;
+  color: #00f2ff;
+  margin-bottom: 10px;
+}
+
+.security-features-box ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.security-features-box li {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 15px;
+}
+
+.security-features-box li::before {
+  content: "•";
+  color: #00f2ff;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* Custom Interactive Buttons */
+.project-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: auto;
+}
+
+.btn {
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-filled {
+  background-color: #00f2ff;
+  color: #0f1115;
+  border: 1px solid #00f2ff;
+  box-shadow: 0 0 10px rgba(0, 242, 255, 0.2);
+}
+
+.btn-filled:hover {
+  background-color: transparent;
+  color: #00f2ff;
+  box-shadow: 0 0 15px #00f2ff;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-outline:hover {
+  border-color: #00f2ff;
+  color: #00f2ff;
+  box-shadow: 0 0 15px rgba(0, 242, 255, 0.3);
+}
+
+/* Responsive adjust */
+@media (max-width: 768px) {
+  .documents-section {
+    padding: 60px 5%;
+  }
+  .project-actions {
+    flex-direction: column;
+  }
+}

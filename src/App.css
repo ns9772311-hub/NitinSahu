@@ -1,0 +1,159 @@
+/* ==========================================================================
+   --- GLOBAL RESET & BODY SETTINGS ---
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body, html, #root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #0d1117; /* Deep Charcoal background */
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Global Container Override */
+.container {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+}
+
+
+/* ==========================================================================
+   --- 1. PERFECT FULL-WIDTH CENTERED NAVBAR (NO WHITE PATTI) ---
+   ========================================================================== */
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: #161b22; /* Header dark background */
+  
+  /* White patti ko hatane ke liye border aur outline ko bilkul zero kar diya */
+  border: none !important;
+  outline: none !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Smooth dark drop shadow */
+
+  /* Flexbox settings jo links ko center me bina kate failayegi */
+  display: flex;
+  justify-content: center; /* Saare links ko barabar area me rakhne ke liye */
+  align-items: center;
+  padding: 20px 0; /* Smooth vertical height */
+}
+
+/* Links Wrapper - Isse koi link screen se bahar nahi katega */
+.navbar-bottom-links {
+  width: 100%;
+  max-width: 1200px; /* Ek standard boundary me dalkar text safe rakhega */
+  display: flex;
+  justify-content: center; /* Links ko na extreme left bhagne dega na right */
+  padding: 0 20px;
+}
+
+/* Menu Items Setup - DOOR DOOR AUR CLEAR SCREEN PAR SPREAD */
+.nav-links {
+  display: flex;
+  list-style: none;
+  justify-content: space-between; /* Poori screen par barabar spread karega */
+  width: 100%; /* Full screen width capture karne ke liye */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  flex: 1;
+  text-align: center; /* Har link apne dappe ke center me rahega */
+}
+
+.nav-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem; /* Achha aur saaf readable text size */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  opacity: 0.85;
+}
+
+/* Hover Effect: Glow on Hover */
+.nav-links li a:hover {
+  color: #00f2ff; /* Neon Cyan glow */
+  opacity: 1;
+  text-shadow: 0 0 10px rgba(0, 242, 255, 0.8);
+}
+
+
+/* ==========================================================================
+   --- 2. HERO SECTION & CONTENT SPACING ---
+   ========================================================================== */
+.main-container {
+  padding-top: 100px; /* Navbar ke peeche text na chupe */
+}
+
+.hero-container {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-greeting {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.highlight {
+  color: #00f2ff;
+  text-shadow: 0 0 15px rgba(0, 242, 255, 0.4);
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: #8b949e;
+  max-width: 600px;
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+
+/* ==========================================================================
+   --- 3. BUTTON STYLES ---
+   ========================================================================== */
+.btn {
+  padding: 12px 30px;
+  background: #ffffff;
+  color: #0d1117;
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #00f2ff;
+  color: #0d1117;
+  box-shadow: 0 0 20px rgba(0, 242, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+/* 2. About Me ka photo container iske peeche se nikalna chahiye */
+.about-image-container, .about-section img, [className*="image"] {
+  z-index: 10 !important; /* Isko kam rakho taaki scroll karne par ye navbar ke peeche chupa rahe */
+}

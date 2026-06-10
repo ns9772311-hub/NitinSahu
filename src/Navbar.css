@@ -17,4 +17,16 @@
     font-size: 14px; /* Mobile par font thoda chota aur clean dikhega */
     padding: 5px 8px;
   }
+  @media screen and (max-width: 768px) {
+  .nav-menu {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 15px !important;
+    padding: 10px 0;
+  }
+  .nav-links {
+    font-size: 14px !important;
+  }
+}
 }

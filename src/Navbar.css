@@ -1,0 +1,20 @@
+/* Mobile screen ke liye special settings */
+@media screen and (max-width: 768px) {
+  /* 1. Navbar ke container ko handle karne ke liye */
+  .navbar-container-ya-jo-bhi-aapka-class-naam-hai {
+    padding: 15px 10px;
+  }
+
+  /* 2. Menu links jo chipak rahe hain unhe door karne ke liye */
+  .nav-menu-ya-ul-tag-ka-name {
+    display: flex;
+    flex-wrap: wrap; /* Isse text screen ke baahar nahi katega, niche aa jayega */
+    justify-content: center;
+    gap: 12px; /* Har ek word ke beech mein space bana dega */
+  }
+
+  .nav-links-ya-a-tag-ka-name {
+    font-size: 14px; /* Mobile par font thoda chota aur clean dikhega */
+    padding: 5px 8px;
+  }
+}

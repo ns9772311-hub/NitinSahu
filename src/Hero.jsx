@@ -7,7 +7,7 @@ const Hero = () => {
             <div className="hero-content">
                 <h1 className="hero-greeting">Hi, I'm <span className="highlight">NITIN SAHU</span></h1>
                 <p className="hero-description">Web Developer | Cyber security & ethical hacking</p>
-                <a href="#"
+                <a href="/nitinresume.pdf"
                 download={"nitinresume.pdf"}
                 className="btn hero-btn"
                 style={{ textDecoration: 'none', display: 'inline-block' }}>
